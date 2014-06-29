@@ -1,0 +1,15 @@
+module gcd;
+
+var 
+  x, y, temp: integer;
+
+begin
+  read(x);
+  read(y);
+  while y <> 0 do 
+    temp := y;
+    y := x mod y;
+    x := temp;
+  end;
+  write(x);
+end gcd.

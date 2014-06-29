@@ -1,0 +1,31 @@
+MODULE matrix;
+
+VAR
+  a: array 100 of array 100 of integer;
+  i, j, n, counter: integer;
+
+BEGIN  
+  read(n);
+  counter := 0;
+  i := 0;
+  while i < n do
+    j := 0;
+    while j < n do
+      a[i][j] := counter;
+      counter := counter + 1;
+      j := j + 1;
+    end;
+    i := i + 1;
+  end;
+
+  i := 0;
+  while i < n do
+    j := 0;
+    while j < n do
+      write(-a[i][j]);
+      j := j + 1;
+    end;
+    writeln();
+    i := i + 1;
+  end;
+END matrix.
